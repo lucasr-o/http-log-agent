@@ -5,7 +5,7 @@ activity and decides the response through two orchestrated LLM agents.
 
 <img width="1163" height="497" alt="architecture drawio" src="https://github.com/user-attachments/assets/f5a43b67-606c-47f1-b953-0b64355ccd8c" />
 
-https://github.com/user-attachments/assets/83ea86fb-2cdc-466b-b970-33ed10570380
+https://github.com/user-attachments/assets/c447b411-2d6c-489b-bdbc-f9e7ee81db82
 
 ---
 
