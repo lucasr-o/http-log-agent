@@ -16,7 +16,7 @@ and what should be done about it.
 
 Detection does not use a rule list. A character language model is fitted on benign
 traffic only, so anything that does not look like the site's normal traffic scores
-high — including attack families the system has never seen. The dataset labels are
+high — including attack families the system has never seen. The [dataset](https://www.kaggle.com/datasets/mahendradata/web-server-access-logs-labeled) labels are
 used to evaluate, never to train.
 
 The pipeline is a funnel. A deterministic layer scores every event in
