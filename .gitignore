@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+*.db
+*.db-journal
+
+# Original dataset (2.8 GB). The versionable slices live in data/.
+labeled.csv
+
+# Internal working notes, not part of the deliverable.
+DECISIONS.md

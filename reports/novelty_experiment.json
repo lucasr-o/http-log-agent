@@ -1,0 +1,41 @@
+{
+  "novelty_char_lm": {
+    "pr_auc": 0.9650395674117886,
+    "roc_auc": 0.999318946846779,
+    "recall_at_1pct_fpr": 0.999163179916318,
+    "cutoff_at_1pct_fpr": 3.7966271112876955
+  },
+  "length_baseline": {
+    "pr_auc": 0.082135518549764,
+    "roc_auc": 0.6114851114226105,
+    "recall_at_1pct_fpr": 0.0,
+    "cutoff_at_1pct_fpr": 1069.0
+  },
+  "novelty_length_correlation": -0.01111577201816668,
+  "per_family": {
+    "bot": {
+      "support": 304,
+      "pr_auc": 0.8539325842696629,
+      "recall_at_1pct_fpr": 1.0,
+      "base_rate": 0.0032996135978813007
+    },
+    "rce": {
+      "support": 66,
+      "pr_auc": 0.9135663536087265,
+      "recall_at_1pct_fpr": 1.0,
+      "base_rate": 0.0007182188173330142
+    },
+    "scanning": {
+      "support": 155,
+      "pr_auc": 0.5753970276405973,
+      "recall_at_1pct_fpr": 0.9935483870967742,
+      "base_rate": 0.001685093984758053
+    },
+    "sqli": {
+      "support": 670,
+      "pr_auc": 0.9689505659949061,
+      "recall_at_1pct_fpr": 1.0,
+      "base_rate": 0.0072433998572942115
+    }
+  }
+}

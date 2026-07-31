@@ -1,0 +1,186 @@
+{
+  "approach": "novelty detection (char n-gram LM fitted on benign traffic only)",
+  "trained_at": "2026-07-30T00:29:49.720212+00:00",
+  "dataset": {
+    "events": 303344,
+    "attacks": 2956,
+    "attack_rate": 0.009744712273854107,
+    "train_events": 210321,
+    "test_events": 93023,
+    "train_ips": 59444,
+    "test_ips": 25477,
+    "type_counts": {
+      "benign": 300388,
+      "bot": 1526,
+      "sqli": 721,
+      "scanning": 474,
+      "rce": 235
+    }
+  },
+  "training": {
+    "fit_urls": 120000,
+    "calibration_urls": 30000,
+    "labels_used_in_fit": false,
+    "target_fpr": 0.002,
+    "url_threshold": 4.241931493888402,
+    "agent_threshold": 3.3827087402951084,
+    "variant": "url_only"
+  },
+  "novelty_url_only": {
+    "variant": "url_only",
+    "pr_auc": 0.9698033640728707,
+    "roc_auc": 0.9993724031630538,
+    "recall": 0.9882845188284519,
+    "precision": 0.862043795620438,
+    "false_positive_rate": 0.0020581957572853595,
+    "false_positives": 189,
+    "false_negatives": 14,
+    "recall_by_type": {
+      "bot": {
+        "support": 304,
+        "recall": 1.0,
+        "pr_auc": 0.8786127167630058
+      },
+      "rce": {
+        "support": 66,
+        "recall": 1.0,
+        "pr_auc": 0.9055315055315055
+      },
+      "scanning": {
+        "support": 155,
+        "recall": 0.9870967741935484,
+        "pr_auc": 0.6195470464684338
+      },
+      "sqli": {
+        "support": 670,
+        "recall": 0.982089552238806,
+        "pr_auc": 0.9713156865899738
+      }
+    }
+  },
+  "novelty_url_and_user_agent": {
+    "variant": "url_and_user_agent",
+    "pr_auc": 0.7604710224848313,
+    "roc_auc": 0.9980062689514305,
+    "recall": 0.9882845188284519,
+    "precision": 0.7800528401585205,
+    "false_positive_rate": 0.0036263449056932527,
+    "false_positives": 333,
+    "false_negatives": 14,
+    "recall_by_type": {
+      "bot": {
+        "support": 304,
+        "recall": 1.0,
+        "pr_auc": 0.5917118237034374
+      },
+      "rce": {
+        "support": 66,
+        "recall": 1.0,
+        "pr_auc": 0.3162300816618485
+      },
+      "scanning": {
+        "support": 155,
+        "recall": 0.9870967741935484,
+        "pr_auc": 0.32359155665437034
+      },
+      "sqli": {
+        "support": 670,
+        "recall": 0.982089552238806,
+        "pr_auc": 0.6591754937004377
+      }
+    }
+  },
+  "operating_points": [
+    {
+      "target_fpr": 0.0002,
+      "threshold": 4.9186,
+      "event_recall": 0.5247,
+      "incident_recall": 0.2017,
+      "incidents_missed": 289,
+      "attack_events_visible_to_agent": 0.6745,
+      "precision": 0.9736,
+      "false_positives": 17,
+      "false_negatives": 568,
+      "dossiers": 89
+    },
+    {
+      "target_fpr": 0.0005,
+      "threshold": 4.7247,
+      "event_recall": 0.5632,
+      "incident_recall": 0.2017,
+      "incidents_missed": 289,
+      "attack_events_visible_to_agent": 0.6745,
+      "precision": 0.956,
+      "false_positives": 31,
+      "false_negatives": 522,
+      "dossiers": 103
+    },
+    {
+      "target_fpr": 0.001,
+      "threshold": 4.5156,
+      "event_recall": 0.9305,
+      "incident_recall": 0.9779,
+      "incidents_missed": 8,
+      "attack_events_visible_to_agent": 0.9908,
+      "precision": 0.9376,
+      "false_positives": 74,
+      "false_negatives": 83,
+      "dossiers": 423
+    },
+    {
+      "target_fpr": 0.002,
+      "threshold": 4.2419,
+      "event_recall": 0.9883,
+      "incident_recall": 0.9972,
+      "incidents_missed": 1,
+      "attack_events_visible_to_agent": 0.9992,
+      "precision": 0.862,
+      "false_positives": 189,
+      "false_negatives": 14,
+      "dossiers": 532
+    },
+    {
+      "target_fpr": 0.005,
+      "threshold": 4.0183,
+      "event_recall": 0.9992,
+      "incident_recall": 0.9972,
+      "incidents_missed": 1,
+      "attack_events_visible_to_agent": 0.9992,
+      "precision": 0.7393,
+      "false_positives": 421,
+      "false_negatives": 1,
+      "dossiers": 742
+    },
+    {
+      "target_fpr": 0.01,
+      "threshold": 3.7869,
+      "event_recall": 0.9992,
+      "incident_recall": 0.9972,
+      "incidents_missed": 1,
+      "attack_events_visible_to_agent": 0.9992,
+      "precision": 0.5788,
+      "false_positives": 869,
+      "false_negatives": 1,
+      "dossiers": 1124
+    }
+  ],
+  "windows": {
+    "total": 38840,
+    "with_attack": 362
+  },
+  "baseline_regex": {
+    "precision": 0.9970355731225297,
+    "recall": 0.8443514644351464,
+    "f1": 0.9143633892161305,
+    "false_positives": 3,
+    "false_negatives": 186
+  },
+  "baseline_supervised": {
+    "precision": 0.8351226993865031,
+    "recall": 0.9112970711297071,
+    "f1": 0.8715486194477791,
+    "false_positives": 215,
+    "false_negatives": 106,
+    "threshold": 0.1739230431299023
+  }
+}

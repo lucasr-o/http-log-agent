@@ -1,0 +1,16 @@
+services:
+  detector:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_PATH: /app/data/detector.db
+    volumes:
+      # Keeps the database across container restarts.
+      - detector-data:/app/data
+
+volumes:
+  detector-data:
