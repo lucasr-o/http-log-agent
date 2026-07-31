@@ -3,7 +3,7 @@
 Python backend that analyzes batches of web server access logs, detects anomalous
 activity and decides the response through two orchestrated LLM agents.
 
-<img width="4732" height="2068" alt="image" src="https://github.com/user-attachments/assets/74571ca5-fb28-4ce6-927e-8f2e790969b1" />
+<img width="1163" height="497" alt="architecture drawio" src="https://github.com/user-attachments/assets/f5a43b67-606c-47f1-b953-0b64355ccd8c" />
 
 ---
 
